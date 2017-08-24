@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+{% if chain_list %}
+
+    <table border="1">
+        <tr>
+            <th>对象</th>
+            <th>账号</th>
+            <th>密码</th>
+        </tr>
+        {% for chain in chain_list %}
+        <tr>
+            <td><a href="/view/{{ chain.id }}/">{{ chain.obj }}</a></td>
+            <td>{{ chain.user }}</td>
+            <td>{{ chain.psw }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+{% else %}
+    <p>No Chains are available.</p>
+{% endif %}
+</body>
+</html>

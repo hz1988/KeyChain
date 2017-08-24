@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if chain %}
+    <ul>
+    <table border="1">
+        <tr><th>对象</th><td>{{ chain.obj }}</td></tr>
+        <tr><th>账号</th><td>{{ chain.user }}</td></tr>
+        <tr><th>密码</th><td>{{ chain.psw }}</td></tr>
+        <tr><th>邮箱</th><td>{{ chain.email }}</td></tr>
+        <tr><th>手机号</th><td>{{ chain.phone_num }}</td></tr>
+        <tr><th>注册日期</th><td>{{ chain.reg_date }}</td></tr>
+        <tr><th>备注</th><td>{{ chain.remarks }}</td></tr>
+    </table>
+    </ul>
+{% else %}
+    <p>No Chains are available.</p>
+{% endif %}
+</body>
+</html>
